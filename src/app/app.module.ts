@@ -7,23 +7,31 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { SpeechRecognition } from '@ionic-native/speech-recognition';
+
+import { NgxGaugeModule } from 'ngx-gauge';
+import { GuagePage } from '../pages/guage/guage';
+
+import { DNS } from '@ionic-native/dns';
+import { DnsPage } from '../pages/dns/dns';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,GuagePage,DnsPage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,NgxGaugeModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,GuagePage,DnsPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen,SpeechRecognition,DNS,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
