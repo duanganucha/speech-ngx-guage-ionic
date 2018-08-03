@@ -13,15 +13,9 @@
 </ion-header>
 
 
-<ion-content padding style="background-color: rgb(7, 160, 109)">
+<ion-content padding>
 
-  <ngx-gauge [type]="gaugeType" 
-            [value]="gaugeValue" 
-            [label]="gaugeLabel"  
-            [append]="gaugeAppendText"
-            [backgroundColor]	="bgColor"
-            [thresholds]="thresholdConfig">
-</ngx-gauge>
-
+  <ngx-gauge [type]="gaugeType" [value]="gaugeValue" [label]="gaugeLabel" [append]="gaugeAppendText">
+  </ngx-gauge>
 
 </ion-content>

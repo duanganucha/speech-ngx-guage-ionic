@@ -14,24 +14,28 @@ import { GuagePage } from '../pages/guage/guage';
 
 import { DNS } from '@ionic-native/dns';
 import { DnsPage } from '../pages/dns/dns';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,GuagePage,DnsPage
+    HomePage,GuagePage,DnsPage,TabsPage
   ],
   imports: [
-    BrowserModule,NgxGaugeModule,
+    BrowserModule,
+    NgxGaugeModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,GuagePage,DnsPage
+    HomePage,GuagePage,DnsPage,TabsPage
   ],
   providers: [
     StatusBar,
-    SplashScreen,SpeechRecognition,DNS,
+    SplashScreen,
+    SpeechRecognition,
+    DNS,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

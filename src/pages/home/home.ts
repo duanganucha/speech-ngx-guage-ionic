@@ -45,6 +45,7 @@ export class HomePage {
   startListening() {
     console.log('startListening')
     let options = {
+      // language: 'en-US'
       language: 'th-TH'
     }
     this.speechRecognition.startListening(options).subscribe(matches => {
